@@ -1,0 +1,19 @@
+{
+  "baseUrl": "https://automationpractice.com",
+  "retries": 2,
+  "watchForFileChanges": true,
+  "viewportHeight": 1920,
+  "viewposrtWidth": 1080,
+  "env": {
+    "lang": "PL"
+  },
+  "projectId": "3nu19z",
+  "reporter": "mochawesome",
+  "reportOptions": {
+    "reportFilename": "[status]_[datetime]-[name]-report",
+    "timestamp": "isoDateTime",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
+}
