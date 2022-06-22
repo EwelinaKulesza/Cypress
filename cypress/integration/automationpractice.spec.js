@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-import searchPhrases from '../../fixtures/searchPhrases.json';
-import automationPractice from '../../pageObject/automationPracticePage';
+import searchPhrases from '../fixtures/searchPhrases.json';
+import automationPractice from '../pageObject/automationPracticePage';
 const automationPracticeSite = new automationPractice();
 
 
@@ -38,14 +38,14 @@ context("Testing UI of automationpractice site", ()=> {
 
         it("Add product to cart and check if number was added to cart", ()=> {
             automationPracticeSite.selectSecondProduct().click();
-            cy.get('.cross').click();
+            cy.get('.cross').click({force:true});
             cy.get('[title="View my shopping cart"] > .ajax_cart_quantity').should("contain", '1');
         })
 
         it("Add product to cart and go to cart and see if total price is visible", ()=> {
             automationPracticeSite.selectFirstProduct().click();
             cy.get('.cross').click();
-            cy.get('[title="View my shopping cart"]').click();
+            cy.get('[title="View my shopping cart"]').click({force:true});
             cy.get('#total_price').should("contain.text", '$18.51');
         })
 

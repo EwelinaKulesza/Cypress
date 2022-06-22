@@ -1,9 +1,9 @@
 {
-  "baseUrl": "https://automationpractice.com",
+  "baseUrl": "https://automationteststore.com",
   "retries": 2,
   "watchForFileChanges": true,
-  "viewportHeight": 1920,
-  "viewposrtWidth": 1080,
+  "viewportHeight": 1080,
+  "viewposrtWidth": 1920,
   "env": {
     "lang": "PL"
   },
