@@ -42,11 +42,9 @@ context("Testing UI of automationpractice site", ()=> {
             cy.get('[title="View my shopping cart"] > .ajax_cart_quantity').should("contain", '1');
         })
 
-        it("Add product to cart and go to cart and see if total price is visible", ()=> {
+        it("See if total price is visible on product on mainpage", ()=> {
             automationPracticeSite.selectFirstProduct().click();
-            cy.get('.cross').click();
-            cy.get('[title="View my shopping cart"]').click({force:true});
-            cy.get('#total_price').should("contain.text", '$18.51');
+            cy.get('.content_price').should("contain.text", '$16.51');
         })
 
         it("Add product to cart nad close pop-up alert", ()=>{
