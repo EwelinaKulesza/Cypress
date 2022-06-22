@@ -38,11 +38,11 @@ context("Testing UI of automationpractice site", ()=> {
 
         it("Add product to cart and check if number was added to cart", ()=> {
             automationPracticeSite.selectSecondProduct().click();
-            cy.get('.cross').click({force:true});
+            cy.get('.cross').click();
             cy.get('[title="View my shopping cart"] > .ajax_cart_quantity').should("contain", '1');
         })
 
-        it("See if total price is visible on product on mainpage", ()=> {
+        it("See if total price is visible by product on mainpage", ()=> {
             automationPracticeSite.selectFirstProduct().click();
             cy.get('.content_price').should("contain.text", '$16.51');
         })

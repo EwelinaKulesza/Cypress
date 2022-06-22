@@ -1,0 +1,96 @@
+Feature: Automationpractice tests
+
+In order to check if all key elements on my site are visible
+As a client
+I want to check site logo visibility
+
+Given I am on a site
+When I go to the site header
+Then the logo of the site is visible
+
+As a client 
+I want to check site home-slider visibility
+
+Given I am on a site
+When I am on the landing page
+Then home slider is visible
+
+As a client 
+I want  to check banner visibility
+
+Given I am on a site
+When I am on the landing page
+Then banner is visible
+
+In order to check if the product is found
+As a user
+I want to find products
+
+Given I am on the main page
+And there are products on site which I am looking for
+When I type the product name in the search input
+And I click on the search button
+Then the product I was looking for is found
+
+In order to check if the product is added to the cart
+As a user
+I want to check if the product was added to the cart correctly
+
+Given I am on a site
+When I click on the "Add to cart" button below the product photo
+Then I see a pop-up alert with the text "Product successfully added to your shopping cart"
+
+Given I am on a site
+When I click on the "Add to cart" button below the product photo
+Then on a cart, I can see a number of added products
+
+Given I am on a site
+When I click on the "Add to cart" button below the product photo
+And I go to cart
+Then I can see the total price of added products
+
+In order to check if I can close the pop-ups
+As a user
+I want to close the pop-up alert after adding a product to the cart
+
+Given I am on a site
+When I click on the "Add to cart" button below the product photo
+And a pop-up alert is visible
+And I click on the cross icon on the pop-up alert
+Then the pop-up alert is not visible
+
+In order to check if I can change pages on my site
+As a user
+I want to change pages when I click on elements with links
+
+Given I am the site
+When I click on the "About us" element
+Then I go to the subpage "About us"
+
+Given I am on the "New products" subpage
+When I click on the header logo
+Then I go to the main page
+
+In order to check the information on the product card
+As a user
+I want to check if the product card contains a Datasheet
+
+Given I am on site
+When I click on the product name
+And a product card is visible
+Then I see a data sheet on the product page heading
+
+In order to check if messages can be sent by form on site
+As a user
+I want to send a message by "Contact us" form
+
+Given I am on a site
+When I click on the "Contact us" link
+And I can see a "Contact us" form
+And I select who I want to contact
+And I type an email
+And I type a message
+And click a on "submit" button
+Then I can see an alert with text "Your message has been successfully sent to our team."
+
+
